@@ -1,0 +1,214 @@
+{\rtf1\ansi\ansicpg949\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset129 AppleSDGothicNeo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14420\viewh14680\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 String str2 = new String("abc");\
+\
+str1.equals("abc") ? true\
+// str2\'bf\'cd \'a1\'b0abc\'a1\'b1\'c0\'c7 \'b3\'bb\'bf\'eb\'c0\'cc \'b0\'b0\'c0\'ba\'b5\'a5\'b5\'b5 \'a1\'ae==\'a1\'af\'b7\'ce \'ba\'f1\'b1\'b3\'c7\'cf\'b8\'e9, false\'b8\'a6 \'b0\'e1\'b0\'fa\'b7\'ce \'be\'f2\'b4\'c2\'b4\'d9. \'b3\'bb\'bf\'eb\'c0\'ba \'b0\'b0\'c1\'f6\'b8\'b8 \'bc\'ad\'b7\'ce \'b4\'d9\'b8\'a5 \'b0\'b4\'c3\'bc\'c0\'cc\'b1\'e2 \'b6\'a7\'b9\'ae\'c0\'cc\'b4\'d9. \
+\
+-----------------------\
+\
+int []a=new int[4];\
+int[] score1 = new int[]\{50, 60, 70, 80, 90\}; // \'b9\'e8\'bf\'ad\'c0\'c7 \'bb\'fd\'bc\'ba\'b0\'fa \'c3\'ca\'b1\'e2\'c8\'ad\'b8\'a6 \'b5\'bf\'bd\'c3\'bf\'a1\
+int[] score2 = \{50, 60, 70, 80, 90\} // new int[]\'b8\'a6 \'bb\'fd\'b7\'ab\'c7\'d2 \'bc\'f6 \'c0\'d6\'c0\'bd\
+\
+int [] score;\
+score = new int[]\{50, 60, 70, 80, 90\}; // OK\
+score = \{50, 60, 70, 80, 90\}; // \'bf\'a1\'b7\'af. new int[]\'b8\'a6 \'bb\'fd\'b7\'ab\'c7\'d2 \'bc\'f6 \'be\'f8\'c0\'bd\
+\
+for\'b9\'ae \'b4\'eb\'bd\'c5 System\'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 arraycopy()\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'b8\'e9 \'ba\'b8\'b4\'d9 \'b0\'a3\'b4\'dc\'c7\'cf\'b0\'ed \'ba\'fc\'b8\'a3\'b0\'d4 \'b9\'e8\'bf\'ad\'c0\'bb \'ba\'b9\'bb\'e7\
+\
+char\'b9\'e8\'bf\'ad\'b0\'fa String\'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'c7\'d1 \'b0\'a1\'c1\'f6 \'c1\'df\'bf\'e4\'c7\'d1 \'c2\'f7\'c0\'cc\'b4\'c2, String\'b0\'b4\'c3\'bc(\'b9\'ae\'c0\'da\'bf\'ad)\'b4\'c2 \'c0\'d0\'c0\'bb \'bc\'f6\'b8\'b8 \'c0\'d6\'c0\'bb \'bb\'d3 \'b3\'bb\'bf\'eb\'c0\'bb \'ba\'af\'b0\'e6\'c7\'d2 \'bc\'f6 \'be\'f8\'b4\'d9. (\'ba\'af\'b0\'e6 \'b0\'a1\'b4\'c9\'c7\'d1 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'bb \'b4\'d9\'b7\'e7\'b7\'c1\'b8\'e9, StringBuffer \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'b8\'e9 \'b5\'c8\'b4\'d9.)\
+\
+----------------------\
+\
+\'b4\'d9\'c2\'f7\'bf\'f8 \'b9\'e8\'bf\'ad\
+\
+int [][]a=new int[2][3];\
+int a[][]=\{  \{1, 2\}  ,   \{3, 4\}   \};\
+\
+\'b9\'e8\'bf\'ad\'c0\'c7 \'bf\'e4\'bc\'d2\'bc\'f6 \'b1\'b8\'c7\'cf\'b1\'e2 - length \'c0\'cc\'bf\'eb\
+\
+----------------------\
+\
+\'c3\'e2\'b7\'c2\
+\
+int i = 123;\
+double d = 3.14;\
+String str = "\'b9\'ae\'c0\'da\'bf\'ad";\
+System.out.println("i = " + i + ", d = " + d + ", str = " + str);\
+\
+----------------------\
+\
+string\'c0\'bb \'c7\'d1\'b1\'db\'c0\'da\'be\'bf \'c3\'e2\'b7\'c2\
+\
+for (int i = 0; i < str.length(); i++) \{\
+	System.out.print(str.charAt(i)); \
+\}\
+\
+-----------------------\
+\
+ragged \'b9\'e8\'bf\'ad\
+\
+int[][] ar;\
+ar = new int[3][];\
+		\
+ar[0] = new int[3];\
+ar[1] = new int[2];\
+ar[2] = new int[4];\
+\
+----------------------\
+\
+/* \'b9\'ab\'c7\'d1 \'b7\'e7\'c7\'c1\'bf\'cd break\'b7\'ce \'c3\'d6\'bc\'d2 \'b0\'f8\'b9\'e8\'bc\'f6 \'c3\'a3\'b1\'e2\
+class JavaExam \{\
+	public static void main(String args[]) \{\
+		int a = 6;\
+		int b = 8;\
+		\
+		int k = 1;\
+		for (;;) \{\
+			if (k % a == 0 && k % b == 0) \{\
+				break;\
+			\}\
+			k++;\
+		\}\
+		System.out.printf("%d\'bf\'cd %d\'c0\'c7 \'c3\'d6\'bc\'d2 \'b0\'f8\'b9\'e8\'bc\'f6 = %d", a, b, k);\
+	\}\
+\}\
+\
+-----------------------\
+\
+/* \'b9\'ae\'c0\'da\'bf\'ad \'b0\'cb\'bb\'f6\
+String str = "String Search Method of String Class";\
+		\
+System.out.println("\'be\'d5\'c2\'ca t = " + str.indexOf('t'));\
+System.out.println("\'b5\'da\'c2\'ca t = " + str.lastIndexOf('t'));\
+\
+----------------------\
+\
+str3.replaceFirst("\'c0\'cf\'ba\'bb", "\'c7\'d1\'b1\'b9"));\
+\
+str3.replaceAll("\'c0\'cf\'ba\'bb", "\'c7\'d1\'b1\'b9"));\
+\
+str.append(ch); // string builder\
+\
+-------------------------\
+\
+/* \'ba\'ce\'ba\'d0 \'b9\'ae\'c0\'da\'bf\'ad \'c3\'df\'c3\'e2\
+String str = "0123456789";\
+System.out.println(str.substring(3,7));\
+		\
+String name = "\'c1\'a6 \'c0\'cc\'b8\'a7\'c0\'ba <\'be\'c6\'b9\'ab\'b0\'b3>\'c0\'d4\'b4\'cf\'b4\'d9.";\
+int st, ed;\
+st = name.indexOf('<');\
+ed = name.indexOf('>');\
+		System.out.println(name.substring(st+1,ed));\
+\
+----------------------\
+\
+\'b3\'ad\'bc\'f6 \'bb\'fd\'bc\'ba\
+\
+Random R = new Random();\
+R.nextInt(100)\
+\
+-----------------------\
+ArrayList\
+\
+ArrayList<String> arName = new ArrayList<String>();\
+arName.add("\'c0\'fc\'b5\'ce\'c8\'af");\
+arName.add("\'b1\'e8\'bf\'b5\'bb\'ef");\
+arName.add(1,"\'b3\'eb\'c5\'c2\'bf\'ec"); // \'b5\'a4\'be\'ee\'be\'b2\'b1\'e2\
+for (int i = 0;i < arName.size();i++) \{\
+    System.out.println(arName.get(i));\
+\}\
+\
+arName.remove(2)\
+\
+if (arName.indexOf("\'b3\'eb\'c5\'c2\'bf\'ec") != -1) \{\
+    System.out.println("\'c0\'d6\'b4\'d9"); \}\
+\
+// \'b1\'e2\'ba\'bb\'c7\'fc\
+ArrayList<Integer> arNum = new ArrayList<Integer>();\
+arNum.add(86);\
+arNum.add(92);\
+arNum.add(77);\
+for (Integer i : arNum) \{\
+	System.out.println(i);\}\
+\
+------------------\
+\
+boolean t = (1>b);\
+\
+switch(\'c1\'b6\'b0\'c7\'b0\'aa) \{\
+	case \'c1\'b6\'b0\'c7 1:\
+		\'b8\'ed\'b7\'c9\'b9\'ae;\
+		break;\
+	case \'c1\'b6\'b0\'c7 2:\
+		\'b8\'ed\'b7\'c9\'b9\'ae;\
+		break;\
+	case \'c1\'b6\'b0\'c7 3:\
+		\'b8\'ed\'b7\'c9\'b9\'ae;\
+		break;\
+	default:\
+		\'b8\'ed\'b7\'c9\'b9\'ae;\
+		break;\
+\}\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+\'ba\'f1\'be\'fa\'b4\'c2\'c1\'f6 \'c8\'ae\'c0\'ce empty()\
+\
+StringUtils \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 isEmpty\'bf\'cd isBlank\'b8\'de\'bc\'d2\'b5\'e5\'b8\'a6 \'be\'b2\'bd\'c3\'b8\'e9\'b5\'c9\'b0\'cd\'b0\'b0\'bd\'c0\'b4\'cf\'b4\'d9. isEmpty\'b4\'c2 String\'c0\'cc null\'c0\'ce\'c1\'f6 \'be\'c6\'b4\'d1\'c1\'f6\'b8\'a6 \'b8\'ae\'c5\'cf\'c7\'d8\'c1\'d6\'b0\'ed isBlank\'b4\'c2 String\'c0\'cc \'b0\'f8\'b9\'e9\'c0\'b8\'b7\'ce\'b8\'b8 \'c2\'f7\'c0\'d6\'c0\'bb\'b0\'e6\'bf\'ec true\'b8\'a6 \'b8\'ae\'c5\'cf\'c7\'d8\'c1\'d6\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\'c0\'d4\'b4\'cf\'b4\'d9.\
+\
+import java.util.List;\
+list.isEmpty()\
+\
+----------------------\
+\
+//Boolean \'c7\'fc\'c5\'c2\'b7\'ce \'b9\'e8\'bf\'ad\'c0\'bb \'bc\'b1\'be\'f0\'c7\'cf\'b0\'ed \'c3\'ca\'b1\'e2\'c8\'ad\'c7\'cf\'b4\'c2 \'bf\'b9\'c1\'a6\
+boolean [] bitList;\
+bitList = new boolean[10]; //\'b1\'e2\'ba\'bb\'b0\'aa\'c0\'b8\'b7\'ce \'c3\'ca\'b1\'e2\'c8\'ad\
+Arrays.fill(bitList, false); //\'c6\'af\'c1\'a4 \'b0\'aa\'c0\'b8\'b7\'ce \'c3\'ca\'b1\'e2\'c8\'ad\
+\
+-----------------------\
+Arrays.sort( \'b9\'e8\'bf\'ad\'b8\'ed );\
+\
+// \'b9\'d9\'b2\'ef \'b9\'dd\'ba\'b9\'b9\'ae\
+for( String [] s : stringArrays ) // \'c7\'e0\'c0\'bb \'b0\'a1\'c1\'ae\'bf\'c0\'b1\'e2\
+	for( String t : s ) // \'bf\'ad\'c0\'bb \'b0\'a1\'c1\'ae\'bf\'c0\'b1\'e2\
+		System.out.print( t ); //2\'c2\'f7\'bf\'f8 \'b9\'e8\'bf\'ad\'c0\'c7 \'b0\'a2 \'b0\'aa\'c0\'cc t\'bf\'a1 \'b4\'e3\'b0\'dc\'c1\'f8\'b4\'d9.\
+\
+-----------------\
+\
+\'bd\'ba\'c5\'c3 & \'c5\'a5 (linked list)\
+\
+http://tcpschool.com/java/java_collectionFramework_stackQueue\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \
+\
+import java.util.LinkedList;\
+import java.util.Queue;\
+\
+public class Test \{\
+\
+public static void main(String[] args) \{\
+Queue<String> q = new LinkedList<String>();  // LinkedList \'b4\'c2 \'b5\'da\'bf\'a1\'b4\'d9 list\'c7\'fc\'bd\'c4\'c0\'b8\'b7\'ce \'b8\'de\'b4\'d9\'b4\'c2\'b0\'cd\'c0\'bb \'c0\'c7\'b9\'cc\'c7\'d4. \
+//ArrayList \'b9\'e8\'bf\'ad \'c1\'df\'b0\'a3\'bf\'a1 \'c1\'b6\'c0\'fd \'b0\'a1\'b4\'c9\'c7\'d8\'c1\'f6\'b1\'e2\'b6\'a7\'b9\'ae\'bf\'a1 \'c7\'e3\'bf\'ebX \
+q.add("AAA");\
+q.add("BBB");\
+q.add("CCC");\
+q.add("DDD");\
+\
+q.remove();\
+for(String value : q)\
+\{\
+System.out.print(value+ "\\t");\
+\}\
+\
+\}\
+\
+\}}
