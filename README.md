@@ -1,1 +1,1 @@
-# SwiftAlgorithmClub
+# CodingTest Page
